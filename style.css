@@ -169,9 +169,10 @@ nav {
 }
 
 
-.site-info {
+.site-info p {
 	font-size: 12px;
 	float: left;
+	margin-bottom: 10px;
 }
 
 
