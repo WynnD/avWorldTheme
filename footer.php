@@ -1,6 +1,6 @@
 	<footer class="site-footer">
 
-		<nav class="site-nav">
+		<nav class="footer-nav">
 				
 				<?php 
 				
@@ -12,9 +12,12 @@
 				
 		</nav>
 
-		<p><?php bloginfo('name'); ?> - &copy; <?php echo date('Y')?></p>
-		<p>It is <?php the_time('g:i a'); ?> on <?php the_time('l, F jS');?></p>
-		
+		<div style="clear:both"></div>
+
+		<div class="site-info">
+			<p><?php bloginfo('name'); ?> - &copy; <?php echo date('Y')?></p>
+
+		</div>	
 	</footer>
 </div>
 </div>

@@ -70,9 +70,8 @@ function myShowLoginPage() {
 		return; // important
 	}
 }
-
+*/
 
 
 
 add_action( 'wp_enqueue_scripts' , 'avWorld_resources' );
-*/

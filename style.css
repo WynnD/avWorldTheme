@@ -7,7 +7,16 @@ Version: 1.0
 
 /** * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/) * http://cssreset.com */
 
-html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video {	
+html, body, div, span, applet, object, 
+iframe,h1, h2, h3, h4, h5, h6, p, blockquote, 
+pre, a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp, small, 
+strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, article, 
+aside, canvas, details, embed, figure, figcaption, footer,
+header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {	
 	margin: 0;	
 	padding: 0;	
 	border: 0;	
@@ -42,4 +51,123 @@ blockquote:before, blockquote:after,q:before, q:after {
 table {	
 	border-collapse: collapse;	
 	border-spacing: 0;
+}
+
+/* 1.0 Layout */
+
+.mypage {
+	width: 70%;
+	max-width: 900px;
+
+	margin: 0 auto;
+	margin-top: 30px;
+}
+
+.site-header {
+	margin-bottom: 20px;
+}
+
+.site-info {
+	text-align: center;
+}
+
+#banner {
+	float: left;
+	margin-left: 0;
+}
+
+
+/* 2.0 Fonts */
+
+/* 2.1 Size/Family */
+
+body {
+	font-family: Lora, serif;
+	line-height: 1.5;
+}
+
+/* headers */
+h1, h2, h3, h4, h5 {
+	font-family: Lato;
+}
+
+h1 {
+	font-size: 36px;
+}
+
+h2 {
+	font-size: 30px;
+}
+
+h3 {
+	font-size: ;
+}
+
+/* Nav Menus */
+
+nav ul {
+
+}
+
+nav ul li {
+	float: right;
+	margin-left: 30px;
+	margin-top: 30px;
+}
+
+/* Remove margin-left for last menu item */
+nav ul li:last-of-type {
+	margin-left: 0;
+}
+
+
+/* paragraph */
+
+p {
+
+}
+
+/* anchor tags */
+a {
+	text-decoration: none;
+}
+
+/* navigation menus */
+
+nav {
+	list-style: none;
+	font-family: Lato;
+	font-weight: 300;
+
+}
+
+.header-nav {
+	font-size: 24px;
+}
+
+.footer-nav {
+	font-size: 16px;
+}
+
+
+
+.site-info {
+	font-size: 12px;
+	float: left;
+}
+
+
+
+/* 2.2 Font Color */
+
+a {
+	color: hsla(0, 0%, 40%, 1);
+}
+
+a:hover, a:focus {
+	color: hsla(0, 0%, 0% 1);
+}
+
+p {
+	color: hsla(0,0%,20%, 1);
 }
