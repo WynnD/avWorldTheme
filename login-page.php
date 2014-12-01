@@ -27,6 +27,7 @@ get_header();
 			<input type="text" id="flightfreq" name="flightfreq"/>
 
 			<input class="submit" type="submit" value="Sign Up">
+			
 		</form>
 	</div>
 
