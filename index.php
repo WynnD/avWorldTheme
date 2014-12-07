@@ -11,7 +11,7 @@ if (have_posts()) :
 		<article class="post">
 			
 			<h1><?php the_title(); ?></h1>
-			<p><?php the_content(); ?></p>
+			<?php the_content(); ?>
 		</article>	
 	<?php endwhile;
 	
@@ -20,6 +20,7 @@ if (have_posts()) :
 		
 endif; ?>
 	</section>
+</div>
 
 <?php
 get_footer();
