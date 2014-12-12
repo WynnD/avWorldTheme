@@ -10,10 +10,11 @@
 	</head>
 	
 <body <?php body_class(); ?>>
-		<div class="mypage">
+		<div class="my-page">
 			<!-- site-header -->
 			<header class="site-header">
-				<a href="<?php echo home_url();?>"><img id="banner" src="<?php bloginfo('template_directory'); ?>/resources/images/logo.jpg" alt="AvWorld"/></a>
+				<div class="logo-wrapper"><a href="<?php echo home_url();?>"><img id="banner" src="<?php bloginfo('template_directory'); ?>/resources/images/logo.jpg" alt="AvWorld"/></a>
+				</div>
 				<!-- <h4 id="description"><?php bloginfo('description'); ?></h4> -->
 				
 				<nav class="header-nav">
@@ -27,6 +28,6 @@
 					wp_nav_menu( $args ); ?>
 				
 				</nav>
-				<div style="clear:both"></div>
+				<div style="clear:both" class="clearfix"></div>
 			</header> <!-- /site-header -->
 			

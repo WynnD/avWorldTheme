@@ -1,4 +1,6 @@
-	<footer class="site-footer">
+	<div class="footer-wrap">
+
+		<footer class="site-footer">
 
 		<nav class="footer-nav">
 				
@@ -13,10 +15,12 @@
 		</nav>
 		<div class="site-info">
 			<p><?php bloginfo('name'); ?> - &copy; <?php echo date('Y')?></p>
-
 		</div>	
 
 		<div style="clear:both"></div>
+
+	</div>
+</div>
 
 
 	</footer>

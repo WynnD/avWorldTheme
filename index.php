@@ -20,6 +20,8 @@ if (have_posts()) :
 		
 endif; ?>
 	</section>
+	<div class="push"></div>
+</div>
 </div>
 
 <?php
