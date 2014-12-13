@@ -18,8 +18,17 @@ if (have_posts()) :
 	else :
 		echo '<p>No content!</p>';
 		
-endif; ?>
+	endif; ?>
 	</section>
+	<aside class="side-menu">
+		<nav class="side-nav">
+			<?php
+
+			$args = array('theme_location' => 'secondary'
+				);
+			wp_nav_menu( $args ); ?>
+		</nav>
+	</aside>
 	<div class="push"></div>
 </div>
 </div>

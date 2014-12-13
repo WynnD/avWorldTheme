@@ -117,13 +117,16 @@ body {
 	width: 100%;
 	left: 0;
 	padding: 10px 15% 20px 15%;
-	z-index: 1;
+	z-index: 50;
 }	
 
-
+.main {
+	position: relative;
+}
 
 .post-content {
-	z-index: 0;
+	position: relative;
+	z-index: 2;
 	width: 70%;
 	max-width: 850px;
 	margin: 0 0 0 25%;
@@ -140,26 +143,34 @@ body {
 	padding: 0 3%;
 }
 
+.side-menu {
+	width: 20%;
+}
+
 
 /* Footer */
 
 .footer-wrap {
+	position: relative;
 	z-index: 1;
 	display: block;
 	width: 100%;
 	line-height: 30px;
 }
 
-/* sticky footer */
+/* div for sticky footer */
 .push {
 	height: 30px;
+	z-index: -1;
 }
-
-
 
 .site-footer {
 	padding: 0 80px 0 80px;
 	font-size: 50%;
+}
+
+.footer-wrap {
+	z-index: 30;
 }
 
 
@@ -233,14 +244,19 @@ p {
 	margin: 0 5% 20px;
 }
 
-.post p:last-of-type {
-	margin-bottom: 0;
-}
+
+/* lists */
 
 .post ul,
 .post ol {
 	font-size: 2em;
-	margin-left: 10px;
+	margin: 0 5%;
+	list-style-position: inside;
+}
+
+.post li {
+	padding-left: 5px;
+	margin-bottom: 10px;
 }
 
 .post ul {
@@ -289,6 +305,25 @@ nav ul li:last-of-type {
 	margin-left: 0;
 }
 
+.side-menu {
+	z-index: 0;
+	position: absolute;
+	font-size: 2em;
+	top: 105px;	
+	left: 5%;
+}
+
+.side-nav {
+	padding: 10px 0 5px 20px;
+}
+
+.side-nav ul li {
+	float: none;
+	margin: 0 0 10px 0;
+	text-align: left;
+}
+
+
 /* anchor tags */
 a {
 	text-decoration: none;
@@ -307,6 +342,7 @@ a {
 
 .footer-nav {
 	font-size: 1.6em;
+	font-weight: bold;
 }
 
 .menu-item a[Title="Twitter"]:hover, 
@@ -391,6 +427,10 @@ nav .current-menu-ancestor > a {
 	box-shadow: 0 0 3px 1px gray;
 }
 
+.side-menu {
+	box-shadow: 0 0 3px 1px gray;
+}
+
 /* 3.2 Background */
 
 body {
@@ -401,10 +441,17 @@ body {
 	background: white;
 	background: -prefix-linear-gradient(right, white, hsla(196, 100%, 75%, 1));
 	background: linear-gradient(to right, white 40%, hsla(196, 100%, 75%, 1));
-	background: linear-gradient(to right, white 40%, hsla(196, 100%, 63%, 1));
+
+	/* background: linear-gradient(to right, white 40%, hsla(196, 100%, 63%, 1)); 
+		Accidental second gradient added. made a much deeper blue
+	*/
 }
 
 .post-content {
+	background: white;
+}
+
+.side-menu {
 	background: white;
 }
 
@@ -486,15 +533,3 @@ body {
 	}
 
 }
-
-/* Tablet Portrait size to standard 960 (devices and browsers) */
-@media only screen and (min-width: 768px) and (max-width: 959px) {}
-
-/* All Mobile Sizes (devices and browser) */
-@media only screen and (max-width: 767px) {}
-
-/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
-@media only screen and (min-width: 480px) and (max-width: 767px) {}
-
-/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
-@media only screen and (max-width: 479px) {}   

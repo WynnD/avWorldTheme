@@ -8,11 +8,12 @@ function avWorld_resources() {
 
 register_nav_menus(array(
 		'primary' => __( 'Primary Menu' ),
+		'secondary' => __( 'Side Menu' ),
 		'footer' => __( 'Footer Menu' )
 ));
 
 
-$loginTestGlobalVar = false;
+$myLoginTestGlobalVar = false;
 
 /**
 * login_Test 
@@ -23,16 +24,16 @@ $loginTestGlobalVar = false;
 * @since Nov 28, 2014
 */
 
-/*
 function my_Login_Test() {
 
 	$cookieName = 'avWorld';
 
 	if ( !isset($__COOKIE[$cookieName] )) {
 		// if cookie doesn't exist
+		myShowLoginPage();
 		return false;
 	}
-
+	
 	$cookieVal = trim( $__COOKIE[$cookieName] );
 
 	if ( empty($cookieVal) ) {
@@ -42,8 +43,8 @@ function my_Login_Test() {
 		return false;
 	}
 
-	if ( !cookieVal IS IN DB ) {
-	// if email is not in database, cookie is corrupt or possibly forged
+	if ( !$wpdb->query('SELECT * FROM ' . $wpdb->prefix . 'myuserinfo WHERE email=' . $cookieVal . ' LIMIT 1')) {
+		// if email is not in database, cookie is corrupt or possibly forged
 		unset( $__COOKIE[$cookieName] );
 		myShowLoginPage();
 		return false;
@@ -55,9 +56,6 @@ function my_Login_Test() {
 
 }
 
-if ( !is_admin() ) {
-	add_action( 'template_redirect' , 'my_Login_Test' ); // ADD: Correct hook
-}
 
 
 function myShowLoginPage() {
@@ -66,12 +64,15 @@ function myShowLoginPage() {
 
 	if (!$myLoginTestGlobalVar) {
 		// user not logged in
-		get_template_part( 'login-page' );
+		get_template_part( 'initial-login' );
 		return; // important
 	}
 }
-*/
 
 
+
+/*if ( !is_admin() ) {
+	add_action( 'template_redirect' , 'my_Login_Test' );
+} */
 
 add_action( 'wp_enqueue_scripts' , 'avWorld_resources' );
