@@ -3,8 +3,15 @@
 function avWorld_resources() {
 	
 	wp_enqueue_style('style', get_stylesheet_uri());
-
 }
+
+function avWorld_logo() { ?>
+	<style type="text/css">
+		#banner {
+			background-image: url(<?php bloginfo('template_directory'); ?>/resources/images/logo.jpg);
+		}
+	</style>
+<?php }
 
 register_nav_menus(array(
 		'primary' => __( 'Primary Menu' ),
@@ -76,3 +83,4 @@ function myShowLoginPage() {
 } */
 
 add_action( 'wp_enqueue_scripts' , 'avWorld_resources' );
+add_action( 'wp_enqueue_scripts' , 'avWorld_logo');

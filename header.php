@@ -13,7 +13,7 @@
 		<div class="my-page">
 			<!-- site-header -->
 			<header class="site-header">
-				<div class="logo-wrapper"><a href="<?php echo home_url();?>"><img id="banner" src="<?php bloginfo('template_directory'); ?>/resources/images/logo.jpg" alt="AvWorld"/></a>
+				<div class="logo-wrapper"><a id="banner" href="<?php echo home_url();?>"></a>
 				</div>
 				<!-- <h4 id="description"><?php bloginfo('description'); ?></h4> -->
 				
