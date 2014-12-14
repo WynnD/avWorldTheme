@@ -267,6 +267,11 @@ h3 {
 	margin: 0 4% 15px;
 }
 
+h4 {
+	font-size: 2.3em;
+	margin: 0 5% 15px;
+}
+
 
 /* paragraph */
 
@@ -279,7 +284,6 @@ p {
 	margin-bottom: 20px;
 	margin-left: 20px;
 }
-
 
 
 .post p {
@@ -313,10 +317,13 @@ p {
 	margin: 0 0 10px 0;
 }
 
-
 /* italics */
 em {
 	font-style: italic;
+}
+
+strong {
+	font-weight: bold;
 }
 
 /* small text */
@@ -369,7 +376,93 @@ nav ul li:last-of-type {
 /* anchor tags */
 a {
 	text-decoration: none;
+	outline: none;
 }
+
+
+a:link,
+a:visited {
+	color: hsla(0, 0%, 40%, 1);
+}
+
+a:hover, 
+a:focus {
+	color: hsla(0, 0%, 0%, 1);
+}
+
+/* color on click */
+a:active {
+	color: hsla(263, 100%, 35%, 1);
+}
+
+/* color current page menu item */
+nav .current_page_item > a,
+nav .current-menu-item > a {
+	color: hsla(263, 100%, 35%, 1);
+}
+
+nav .current_page_ancestor > a,
+nav .current-menu-ancestor > a {
+	color: #000;
+}
+
+
+/* Tables */
+
+.member-table {
+	font-family: Lato, sans-serif;
+	text-align: center;
+	width: 90%;
+	margin: 0 auto;
+	border-spacing: 2px;
+}
+
+.member-table-body a,
+.member-table-body p {
+	font-weight: 300;
+	margin: 0;
+	font-size: 1.8em;
+}
+
+.member-table-body a:visited,
+.member-table-body a:link {
+	color: hsla(0, 0%, 20%, 1);
+}
+
+.member-table-body a:hover, 
+.member-table-body a:focus {
+	color: hsla(0, 0%, 0%, 1);
+}
+
+.member-table-head {
+	font-size: 2.0em;
+
+	background: hsla(196, 100%, 75%, 1);
+	background: linear-gradient(225deg, hsla(196, 100%, 75%, 1), hsla(196, 100%, 95%, 1));
+}
+
+.member-table-head tr th {
+	padding: 5px 0 5px 0;
+}
+
+.member-table-body {
+	background: hsla(47, 100%, 75%, 1);
+	background: radial-gradient(circle at 5% 5%, hsla(53, 100%, 80%, 1), hsla(47, 80%, 60%, 1));
+}
+
+.member-table-body tr td {
+	width: 50%;
+}
+
+.member-table-body td a {
+	display: block;
+	padding: 15px 0 15px 0;
+}
+
+.member-table-item {
+	padding: 0 auto;
+}
+
 
 /* navigation menus */
 
@@ -400,8 +493,6 @@ a {
 
 
 
-
-
 /* Footer */
 
 .site-info p {
@@ -429,50 +520,25 @@ ol {
 	color: hsla(0, 0%, 20%, 1);
 }
 
-nav a {
-	outline: 0;
-}
+/* Link coloring */
 
-nav a:link, nav a:visited {
-	color: hsla(0, 0%, 40%, 1);
-}
-
-nav a:hover, 
-nav a:focus {
-	color: hsla(0, 0%, 0%, 1);
-}
-
-/* color menu item on click */
-nav a:active {
-	color: hsla(263, 100%, 35%, 1);
-}
-
-/* color current page menu item */
-nav .current_page_item > a,
-nav .current-menu-item > a {
-	color: hsla(263, 100%, 35%, 1);
-}
-
-nav .current_page_ancestor > a,
-nav .current-menu-ancestor > a {
-	color: #000;
-}
 
 
 /* 3.0 Detail */
 
 /* 3.1 Shadows/Depth */
 
-/* Page */
-
+/* Main content */
 .post-content {
 	box-shadow: 10px 0 30px 1px gray;
 }
 
+/* Header */
 .site-header {
 	box-shadow: 0 0 3px 1px gray;
 }
 
+/* Side menu */
 .side-menu {
 	box-shadow: 0 0 3px 1px gray;
 }
