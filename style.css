@@ -95,13 +95,12 @@ table {
 html,
 body {
 	height: 100%;
-
 	font-size: 20px;
 }
 
 /* sticky footer! .my-page contains header & main content (not footer) */
 .my-page {
-	/* 1 em = 10px (Thanks Codeschool.com ! ) */
+	/* 1 em = 10px ( Thanks Codeschool.com ! ) */
 	font-size: 50%;
 	min-height: 100%;
 	height: auto !important;
@@ -144,16 +143,21 @@ body {
 }
 
 .side-menu {
-	width: 20%;
+	width: 22%;
 }
+
+.side-nav {
+	min-width: 240px;
+}
+
 
 /* hide sub menu items until hovered or selected */
 .sub-menu {
-	font-weight: 300;
-	margin-top: 10px;
-	padding-left: 5px;
 	display: none;
+	font-weight: 300;
+	padding-left: 5px;
 	font-size: .9em;
+	margin-top: 10px;
 }
 
 .menu-item:hover > .sub-menu,
@@ -161,6 +165,7 @@ body {
 .current-page-ancestor > .sub-menu {
 	display: block;
 }
+
 /* end */
 
 
@@ -188,6 +193,7 @@ body {
 .footer-wrap {
 	z-index: 30;
 }
+
 /* footer subtext wrapper */
 
 .site-info p {
@@ -209,26 +215,25 @@ body {
 
 /* Pictures */
 
-.alignleft {
-	float: left;
-}
+img.alignright {float:right; margin:0 0 1em 1em}
+img.alignleft {float:left; margin:0 1em 1em 0}
+img.aligncenter {display: block; margin-left: auto; margin-right: auto}
+a img.alignright {float:right; margin:0 0 1em 1em}
+a img.alignleft {float:left; margin:0 1em 1em 0}
+a img.aligncenter {display: block; margin-left: auto; margin-right: auto}
 
-.alignright {
-	float: right;
-}
-
-.aligncenter {
-	margin: 0 auto 20px auto;
-}
 
 .wp-caption-text {
 	font-family: Lato, sans-serif;
-	font-size: 0.4em;
+	font-size: 1.4em;
 }
 
-.gallery {
-	margin-bottom: 20px;
+/* attempt to add margin-bottom to gallery */
+.gallery:after {
+	content: "";
+	margin-bottom: 10px;
 }
+
 /* 2.0 Fonts */
 
 /* 2.1 Size/Family */
@@ -250,25 +255,25 @@ h5 {
 }
 
 h1 {
-	font-size: 5em;
+	font-size: 4.5em;
 	margin-bottom: 20px;
 	text-align: center;
 }
 
 h2 {
-	font-size: 3.2em;
+	font-size: 3em;
 	font-weight: bold;
 	margin: 0 3% 15px;
 }
 
 h3 {
-	font-size: 2.4em;
+	font-size: 2.6em;
 	font-weight: bold;
 	margin: 0 4% 15px;
 }
 
 h4 {
-	font-size: 2.3em;
+	font-size: 2.4em;
 	margin: 0 5% 15px;
 }
 
@@ -277,7 +282,7 @@ h4 {
 
 p,
 pre {
-	font-size: 2.2em;
+	font-size: 2em;
 }
 
 p {
@@ -359,11 +364,11 @@ nav ul li:last-of-type {
 	position: absolute;
 	font-size: 2em;
 	top: 105px;	
-	left: 5%;
+	left: 4%;
 }
 
 .side-nav {
-	padding: 10px 0 5px 20px;
+	padding: 15px 0 15px 20px;
 }
 
 .side-nav ul li {
@@ -436,18 +441,33 @@ nav .current-menu-ancestor > a {
 
 .member-table-head {
 	font-size: 2.0em;
-
 	background: hsla(196, 100%, 75%, 1);
+	background: -webkit-linear-gradient(225deg, hsla(196, 100%, 75%, 1), hsla(196, 100%, 95%, 1)); /* For Chrome 25 and Safari 6, iOS 6.1, Android 4.3 */
+	background: -moz-linear-gradient(225deg, hsla(196, 100%, 75%, 1), hsla(196, 100%, 95%, 1)); /* For Firefox (3.6 to 15) */
+	background: -o-linear-gradient(225deg, hsla(196, 100%, 75%, 1), hsla(196, 100%, 95%, 1)); /* For old Opera (11.1 to 12.0) */ 	
 	background: linear-gradient(225deg, hsla(196, 100%, 75%, 1), hsla(196, 100%, 95%, 1));
 }
 
-.member-table-head tr th {
-	padding: 5px 0 5px 0;
+.member-table-head th {
+	padding: 10px 0;
 }
 
-.member-table-body {
+
+.member-table {
 	background: hsla(47, 100%, 75%, 1);
+	background: -webkit-radial-gradient(5% 5%, hsla(53, 100%, 80%, 1), hsla(47, 80%, 60%, 1)); /* For Chrome 25 and Safari 6, iOS 6.1, Android 4.3 */
+	background: -moz-linear-gradient(5% 5%, hsla(53, 100%, 80%, 1), hsla(47, 80%, 60%, 1)); /* For Firefox (3.6 to 15) */
+	background: -o-linear-gradient(5% 5%, hsla(53, 100%, 80%, 1), hsla(47, 80%, 60%, 1)); /* For old Opera (11.1 to 12.0) */ 	
 	background: radial-gradient(circle at 5% 5%, hsla(53, 100%, 80%, 1), hsla(47, 80%, 60%, 1));
+}
+
+.member-table:hover,
+.member-table:focus {
+	background: hsla(47, 100%, 75%, 1);
+	background: -webkit-radial-gradient(5% 5%, hsla(53, 100%, 85%, 1), hsla(47, 80%, 60%, 1)); /* For Chrome 25 and Safari 6, iOS 6.1, Android 4.3 */
+	background: -moz-linear-gradient(5% 5%, hsla(53, 100%, 85%, 1), hsla(47, 80%, 60%, 1)); /* For Firefox (3.6 to 15) */
+	background: -o-linear-gradient(5% 5%, hsla(53, 100%, 85%, 1), hsla(47, 80%, 60%, 1)); /* For old Opera (11.1 to 12.0) */ 	
+	background: radial-gradient(circle at 5% 5%, hsla(53, 100%, 85%, 1), hsla(47, 80%, 60%, 1));
 }
 
 .member-table-body tr td {
@@ -551,12 +571,10 @@ body {
 
 .site-header {
 	background: white;
-	background: -prefix-linear-gradient(right, white, hsla(196, 100%, 75%, 1));
-	background: linear-gradient(to right, white 40%, hsla(196, 100%, 75%, 1));
-
-	/* background: linear-gradient(to right, white 40%, hsla(196, 100%, 63%, 1)); 
-		Accidental second gradient added. made a much deeper blue
-	*/
+	background-image: -webkit-linear-gradient(right, white, hsla(196, 100%, 75%, 1)); /* For Chrome 25 and Safari 6, iOS 6.1, Android 4.3 */
+	background-image: -moz-linear-gradient(right, white, hsla(196, 100%, 75%, 1)); /* For Firefox (3.6 to 15) */
+	background-image: -o-linear-gradient(right, white, hsla(196, 100%, 75%, 1)); /* For old Opera (11.1 to 12.0) */ 	
+	background-image: linear-gradient(to right, white 40%, hsla(196, 100%, 75%, 1)); /* Standard syntax */
 }
 
 .post-content {
@@ -569,9 +587,10 @@ body {
 
 .site-footer {
 	background: #DDD;
-	background: -prefix-linear-gradient(bottom, #FFF, #BBB);
-	background: linear-gradient(to bottom, #FFF, #BBB);
-	background: linear-gradient(to bottom, #FFF, #BBB);
+	background-image: -webkit-linear-gradient(bottom, #FFF, #BBB); /* For Chrome 25 and Safari 6, iOS 6.1, Android 4.3 */
+	background-image: -moz-linear-gradient(bottom, #FFF, #BBB); /* For Firefox (3.6 to 15) */
+	background-image: -o-linear-gradient(bottom, #FFF, #BBB); /* For old Opera (11.1 to 12.0) */ 
+	background-image: linear-gradient(to bottom, #FFF, #BBB); /* Standard syntax */
 }
 
 
@@ -595,6 +614,7 @@ body {
 }
 
 @media (max-width: 880px) {
+	
 	.site-header {
 		padding: 5px 10%;
 	}
@@ -603,9 +623,14 @@ body {
 		font-size: 35%;
 	}
 
+	.post-content {
+		padding-top: 110px;
+	}
+
 	.side-menu {
 		top: 85px;
 	}
+
 }
 
 @media (max-width: 780px) {
