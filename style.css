@@ -1,7 +1,8 @@
 /*
 Theme Name: AvWorld
 Author: Wynn Drahorad
-Author URI: https://www.linkedin.com/profile/view?id=128668099
+	Linkedin: https://www.linkedin.com/profile/view?id=128668099
+	Github: https://github.com/WynnD
 Version: 1.0
 */
 
@@ -68,11 +69,8 @@ table {
 	border-spacing: 0;
 }
 
-
-
-/* 1.0 Layout */
-
 /* border-box sizing */
+
 * {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
@@ -91,23 +89,23 @@ table {
 * http://ryanfait.com/resources/footer-stick-to-bottom-of-page/
 *
 * main content area stretches to bottom of page
-* The line directly below is part of sticky footer */
+*
+* .my-page contains header & main content (not footer) */
+
 html,
 body {
 	height: 100%;
 	font-size: 20px;
 }
 
-/* sticky footer! .my-page contains header & main content (not footer) */
 .my-page {
-	/* 1 em = 10px ( Thanks Codeschool.com ! ) */
-	font-size: 50%;
 	min-height: 100%;
 	height: auto !important;
 	height: 100%;
 	margin: 0 auto -30px;
-}
 
+	font-size: 50%;
+}
 
 /* header wrapper */
 
@@ -116,7 +114,7 @@ body {
 	width: 100%;
 	left: 0;
 	padding: 10px 15% 20px 15%;
-	z-index: 50;
+	z-index: 10;
 }	
 
 .main {
@@ -154,10 +152,10 @@ body {
 /* hide sub menu items until hovered or selected */
 .sub-menu {
 	display: none;
-	font-weight: 300;
 	padding-left: 5px;
-	font-size: .9em;
 	margin-top: 10px;
+	font-size: .9em;
+	font-weight: 300;
 }
 
 .menu-item:hover > .sub-menu,
@@ -172,9 +170,9 @@ body {
 /* Footer */
 
 .footer-wrap {
+	display: block;
 	position: relative;
 	z-index: 1;
-	display: block;
 	width: 100%;
 	line-height: 30px;
 }
@@ -191,7 +189,7 @@ body {
 }
 
 .footer-wrap {
-	z-index: 30;
+	z-index: 7;
 }
 
 /* footer subtext wrapper */
@@ -202,9 +200,9 @@ body {
 }
 
 #banner {
-	float: left;
 	width: 164px;
 	height: 75px;
+	float: left;
 }
 
 
@@ -228,23 +226,19 @@ a img.aligncenter {display: block; margin-left: auto; margin-right: auto}
 	font-size: 1.4em;
 }
 
-/* attempt to add margin-bottom to gallery */
-.gallery:after {
-	content: "";
-	margin-bottom: 10px;
+.gallery-item {
+	margin-bottom: 20px;
 }
 
 /* 2.0 Fonts */
 
-/* 2.1 Size/Family */
-
 body {
-	font-family: Lora, serif;
 	line-height: 1.4;
+	font-family: Lora, serif;
 }
 
 
-/* headers */
+/* Headlines */
 
 h1, 
 h2, 
@@ -255,34 +249,46 @@ h5 {
 }
 
 h1 {
-	font-size: 4.5em;
-	margin-bottom: 20px;
+	margin-bottom: 25px;
 	text-align: center;
+	font-size: 4.5em;
+	color: hsla(0, 0%, 30%, 1);
+}
+
+h2,
+h3,
+h4,
+h5 {
+	color: hsla(0, 0%, 20%, 1);
 }
 
 h2 {
+	margin: 0 3% 15px;
 	font-size: 3em;
 	font-weight: bold;
-	margin: 0 3% 15px;
 }
 
 h3 {
+	margin: 0 4% 10px;
 	font-size: 2.6em;
 	font-weight: bold;
-	margin: 0 4% 15px;
 }
 
 h4 {
+	margin: 0 5% 10px;
 	font-size: 2.4em;
-	margin: 0 5% 15px;
 }
 
-
-/* paragraph */
+p,
+ul,
+ol {
+	color: hsla(0, 0%, 20%, 1);
+}
 
 p,
 pre {
 	font-size: 2em;
+	text-align: left;
 }
 
 p {
@@ -290,39 +296,6 @@ p {
 	margin-left: 20px;
 }
 
-
-.post p {
-	margin: 0 5% 20px;
-}
-
-
-/* lists */
-
-.post ul,
-.post ol {
-	font-size: 2em;
-	margin: 0 5%;
-	list-style-position: inside;
-}
-
-.post li {
-	padding-left: 5px;
-	margin-bottom: 10px;
-}
-
-.post ul {
-	list-style-type: square;
-}
-
-.post ol {
-	list-style-type: decimal;
-}
-
-.post li {
-	margin: 0 0 10px 0;
-}
-
-/* italics */
 em {
 	font-style: italic;
 }
@@ -331,59 +304,20 @@ strong {
 	font-weight: bold;
 }
 
-/* small text */
 small {
 	font-size: 0.72727272727em;
 }
 
-/* Nav Menus */
-
-nav {
-	font-family: Lato, sans-serif;
-	font-weight: 300;
-}
-
-nav ul {
-	list-style-type: none;
-	margin: 0;
-}
-
-/* float menus to the right, add */
-nav ul li {
-	float: right;
-	margin: 0 0 0 30px;
-}
-
-/* Remove margin-left for last header menu item */
-nav ul li:last-of-type {
-	margin-left: 0;
-}
-
-.side-menu {
-	z-index: 0;
-	position: absolute;
-	font-size: 2em;
-	top: 105px;	
-	left: 4%;
-}
-
-.side-nav {
-	padding: 15px 0 15px 20px;
-}
-
-.side-nav ul li {
-	float: none;
-	margin: 0 0 10px 0;
-	text-align: left;
-}
 
 
-/* anchor tags */
+/* SECTION: Anchor Tags */
+
 a {
 	text-decoration: none;
 	outline: none;
 }
 
+/* Anchor Coloring */
 
 a:link,
 a:visited {
@@ -396,11 +330,13 @@ a:focus {
 }
 
 /* color on click */
+
 a:active {
 	color: hsla(263, 100%, 35%, 1);
 }
 
 /* color current page menu item */
+
 nav .current_page_item > a,
 nav .current-menu-item > a {
 	color: hsla(263, 100%, 35%, 1);
@@ -411,21 +347,90 @@ nav .current-menu-ancestor > a {
 	color: #000;
 }
 
+/* Nav Menus */
+
+nav {
+	font-family: Lato, sans-serif;
+	font-weight: 300;
+}
+
+nav ul {
+	margin: 0;
+	list-style-type: none;
+}
+
+/* float menus to the right, set 30px margin between each menu item */
+
+nav ul li {
+	margin: 0 0 0 30px;
+	float: right;
+}
+
+/* Remove margin-left for last header menu item */
+
+nav ul li:last-of-type {
+	margin-left: 0;
+}
+
+.side-menu {
+	position: absolute;
+	z-index: 0;
+	top: 105px;
+	left: 4%;
+	font-size: 2em;
+}
+
+.side-nav {
+	padding: 15px 0 15px 20px;
+}
+
+.side-nav ul li {
+	margin: 0 0 10px 0;
+	float: none;
+	text-align: left;
+}
+
+.header-nav {
+	font-size: 2.4em;
+}
+
+/* add margin-top to header menu to align with corp. logo */
+
+.header-nav ul li {
+	margin-top: 24px;
+}
+
+.footer-nav {
+	font-size: 1.6em;
+	font-weight: bold;
+}
+
+.menu-item a[Title="Twitter"]:hover, 
+.menu-item a[Title="Twitter"]:focus {
+	color: #4099FF;
+}
+
+
+.menu-item a[Title="Facebook"]:hover, 
+.menu-item a[Title="Facebook"]:focus {
+	color: #3b5998;
+}
+
 
 /* Tables */
 
 .member-table {
-	font-family: Lato, sans-serif;
-	text-align: center;
 	width: 90%;
 	margin: 0 auto;
 	border-spacing: 2px;
+	font-family: Lato, sans-serif;
+	text-align: center;
 }
 
 .member-table-body a,
 .member-table-body p {
-	font-weight: 300;
 	margin: 0;
+	font-weight: 300;
 	font-size: 1.8em;
 }
 
@@ -452,6 +457,10 @@ nav .current-menu-ancestor > a {
 	padding: 10px 0;
 }
 
+/** 
+* Set background for entire .member-table. When I set the background
+* to .member-table-body, the gradient would repeat in each cell in Chrome.
+*/
 
 .member-table {
 	background: hsla(47, 100%, 75%, 1);
@@ -476,7 +485,7 @@ nav .current-menu-ancestor > a {
 
 .member-table-body td a {
 	display: block;
-	padding: 15px 0 15px 0;
+	padding: 20px 0;
 }
 
 .member-table-item {
@@ -484,86 +493,65 @@ nav .current-menu-ancestor > a {
 }
 
 
-/* navigation menus */
+/* SECTION: Post formatting */
 
-.header-nav {
-	font-size: 24px;
+.post p {
+	margin: 0 5% 20px;
 }
 
-/* add margin-top to header menu to align with corp. logo */
-.header-nav ul li {
-	margin-top: 24px;
+/* lists */
+
+.post ul,
+.post ol {
+	margin: 0 5%;
+	list-style-position: inside;
+	font-size: 2em;
 }
 
-.footer-nav {
-	font-size: 1.6em;
-	font-weight: bold;
+.post li {
+	padding-left: 5px;
+	margin-bottom: 10px;
 }
 
-.menu-item a[Title="Twitter"]:hover, 
-.menu-item a[Title="Twitter"]:focus {
-	color: #4099FF;
+.post ul {
+	list-style-type: square;
 }
 
-
-.menu-item a[Title="Facebook"]:hover, 
-.menu-item a[Title="Facebook"]:focus {
-	color: #3b5998;
+.post ol {
+	list-style-type: decimal;
 }
 
-
+.post li {
+	margin: 0 0 10px 0;
+}
 
 /* Footer */
 
 .site-info p {
-	font-size: 12px;
+	font-size: 1.2em;
 }
 
+/* SECTION: Detail */
 
-/* 2.2 Font Color */
-
-h1 {
-	color: hsla(0, 0%, 30%, 1);
-}
-
-h2,
-h3,
-h4,
-h5 {
-	color: hsla(0, 0%, 20%, 1);
-}
-
-
-p,
-ul,
-ol {
-	color: hsla(0, 0%, 20%, 1);
-}
-
-/* Link coloring */
-
-
-
-/* 3.0 Detail */
-
-/* 3.1 Shadows/Depth */
+/* Shadows/Depth */
 
 /* Main content */
+
 .post-content {
 	box-shadow: 10px 0 30px 1px gray;
 }
-
 /* Header */
+
 .site-header {
 	box-shadow: 0 0 3px 1px gray;
 }
-
 /* Side menu */
+
 .side-menu {
 	box-shadow: 0 0 3px 1px gray;
 }
 
-/* 3.2 Background */
+/* Background */
 
 body {
 	background-image: url('resources/images/clouds-blur.jpg');
@@ -594,12 +582,7 @@ body {
 }
 
 
-
-/* set page as base */
-
-
-
-/* Mobile Media Queries */
+/* SECTION: Mobile Media Queries */
 
 @media (max-width: 1050px) {
 	.my-page {
@@ -630,12 +613,14 @@ body {
 	.side-menu {
 		top: 85px;
 	}
-
 }
+
+/* Width <= 780px: Begin mobile interface */
 
 @media (max-width: 780px) {
 	
 	/* rearrange header-menu */
+
 	.site-header {
 		position: static;
 		margin: 0;
@@ -654,8 +639,8 @@ body {
 
 	#banner,
 	.header-nav ul li {
-		z-index: 1;
 		display: block;
+		z-index: 1;
 		float: none;
 		margin: 0 auto;
 		text-align: center;
@@ -672,11 +657,12 @@ body {
 	.post-content {
 		z-index: 0;
 		max-width: none;
-		box-shadow: 0 9px 3px 6px hsla(0, 0%, 100%, 0.8);
 		width: 100%;
 		padding-top: 10px;
 		margin: 0 auto;
 		background: hsla(0, 0%, 100%, 0.8);
+		box-shadow: 0 9px 3px 6px hsla(0, 0%, 100%, 0.8);
+
 	}
 
 	.site-footer {
@@ -684,8 +670,6 @@ body {
 		box-shadow: 0 0 5px 10px white;
 		background: white;
 	}
-
-
 }
 
 @media (max-width: 600px) {
@@ -698,21 +682,20 @@ body {
 	}
 
 	.site-info p {
+		display: block;
 		float: none;
 		margin: 0;
 		text-align: center;
-		display: block;
 	}
 
 	.footer-nav li {
+		display: block;
 		float: none;
 		margin: 0;
 		text-align: center;
-		display: block;
 	}
 
 	.post p:last-of-type {
 		margin-bottom: 0;
 	}
-
 }
